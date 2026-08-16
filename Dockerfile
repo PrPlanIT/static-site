@@ -46,9 +46,9 @@ RUN set -eux; \
 
 # Hardened config as templates — the entrypoint envsubst's them into /tmp at startup,
 # so the container runs fine with readOnlyRootFilesystem: true.
-COPY nginx.conf     /etc/nginx/nginx.conf.template
-COPY default.conf   /etc/nginx/conf.d/default.conf.template
-COPY entrypoint.sh  /entrypoint.sh
+COPY nginx/nginx.conf    /etc/nginx/nginx.conf.template
+COPY nginx/default.conf  /etc/nginx/conf.d/default.conf.template
+COPY nginx/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 EXPOSE 8080
