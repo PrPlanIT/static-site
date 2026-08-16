@@ -3,23 +3,27 @@
 Hardened, non-root **nginx** (with brotli) base image for prplanit static sites. Consumer repos are two-liners — `FROM` this image and `COPY` your static assets — and inherit non-root, `readOnlyRootFilesystem`-friendly, pinned, and security-scanned defaults.
 
 <!-- sf:project:start -->
-[![GitHub](https://img.shields.io/badge/GitHub-source-181717?logo=github)](https://github.com/PrPlanIT/static-site) [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab)](https://gitlab.prplanit.com/PrPlanIT/static-site) [![Last Commit](https://img.shields.io/github/last-commit/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/commits) [![Open Issues](https://img.shields.io/github/issues/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/issues) [![Contributors](https://img.shields.io/github/contributors/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/graphs/contributors)
+[![GitHub](https://img.shields.io/badge/GitHub-source-181717?logo=github)](https://github.com/PrPlanIT/static-site) [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab)](https://gitlab.prplanit.com/PrPlanIT/static-site) [![Last Commit](https://img.shields.io/github/last-commit/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/commits) [![Open Issues](https://img.shields.io/github/issues/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/issues) [![Open PRs](https://img.shields.io/github/issues-pr/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/pulls) [![Contributors](https://img.shields.io/github/contributors/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/graphs/contributors)
 <!-- sf:project:end -->
 <!-- sf:badges:start -->
 [![build](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/PrPlanIT/static-site/-/pipelines) [![license](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/license.svg)](https://github.com/PrPlanIT/static-site/blob/main/LICENSE) [![release](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release.svg)](https://github.com/PrPlanIT/static-site/releases) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/updated.svg) [![donate](https://img.shields.io/badge/donate-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/T6T41IT163) [![sponsor](https://img.shields.io/badge/sponsor-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/PrPlanIT)
 <!-- sf:badges:end -->
 <!-- sf:image:start -->
 [![Docker](https://img.shields.io/badge/Docker-prplanit%2Fstatic--site-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/prplanit/static-site) [![pulls](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/pulls.svg)](https://hub.docker.com/r/prplanit/static-site)
+
+[![latest](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=v{base}) [![latest-dev](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev)
 <!-- sf:image:end -->
 
 ## Image contents
 
 Base:
 <!-- sf:contents-base:start -->
+![alpine](https://img.shields.io/badge/alpine-${ALPINE__VERSION}-0078D4?style=flat)
 <!-- sf:contents-base:end -->
 
 Packages:
 <!-- sf:contents-apk:start -->
+*No items*
 <!-- sf:contents-apk:end -->
 
 ## Usage
