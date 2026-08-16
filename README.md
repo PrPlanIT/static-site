@@ -12,12 +12,22 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 [![Docker](https://img.shields.io/badge/Docker-prplanit%2Fstatic--site-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/prplanit/static-site) [![pulls](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/pulls.svg)](https://hub.docker.com/r/prplanit/static-site)
 <!-- sf:image:end -->
 
+## Image contents
+
+Base:
+<!-- sf:contents-base:start -->
+<!-- sf:contents-base:end -->
+
+Packages:
+<!-- sf:contents-apk:start -->
+<!-- sf:contents-apk:end -->
+
 ## Usage
 
 Your site repo is just static assets + a two-line Dockerfile:
 
 ```dockerfile
-FROM cr.pcfae.com/prplanit/static-site:vX.Y.Z
+FROM docker.io/prplanit/static-site:vX.Y.Z
 COPY www-data/ /usr/share/nginx/html/
 ```
 

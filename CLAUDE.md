@@ -1,7 +1,7 @@
 # static-site — Project Instructions
 
 Hardened, non-root **nginx** (brotli) base image for prplanit static sites. Consumer site
-repos are `FROM cr.pcfae.com/prplanit/static-site:<tag>` + `COPY www-data/ /usr/share/nginx/html/`
+repos are `FROM docker.io/prplanit/static-site:<tag>` + `COPY www-data/ /usr/share/nginx/html/`
 — they carry only static assets; all nginx/hardening policy lives here.
 
 ## Non-negotiables

@@ -216,15 +216,69 @@ toolchains:
   osv-scanner: "2.3.5"
   cosign: "3.0.6"
 
-# stencils: define each renderable once (id → def). Inline defs render a badge
-# (default) or a shield (render: shield); named producers render via type.
+# stencils: define each renderable once (id → SOURCE type × RENDER). Inline defs
+# render a badge (default) or a shield (render: shield); named producers render
+# through the matching module. Embed as {id} in a scribe body, narrate, or release.
 stencils:
-  # ── generated badges ──
-  build:      { label: build,      message: "{env:BUILD_STATUS}", color: auto, font: monofur, link: "https://gitlab.prplanit.com/{var:gitlab_group}/{var:repo}/-/pipelines" }
-  license:    { label: license,    message: "MIT", color: "#310937", font: monofur, link: LICENSE }
-  release:    { label: release,    message: "v{base}", color: "#74ecbe", font: dejavu-sans, font_size: 11, link: "https://github.com/{var:github_org}/{var:github_repo}/releases" }
-  updated:    { label: updated,    message: "{env:BUILD_DATE}", color: "#236144", font: dejavu-sans, font_size: 11 }
-  pulls:      { label: pulls,      message: "{docker.pulls}", color: "#1d63ed", link: "https://hub.docker.com/r/{var:org}/{var:repo}" }
+  # ── generated badges (SVG rendered from build metadata) ──
+  build:
+    label: build
+    message: "{env:BUILD_STATUS}"
+    color: auto
+    font: monofur
+    link: "https://gitlab.prplanit.com/{var:gitlab_group}/{var:repo}/-/pipelines"
+  license:
+    label: license
+    message: "{project.license}"
+    color: "#310937"
+    font: monofur
+    link: LICENSE
+  release:
+    label: release
+    message: "v{base}"
+    color: "#74ecbe"
+    font: dejavu-sans
+    font_size: 11
+    link: "https://github.com/{var:github_org}/{var:github_repo}/releases"
+  updated:
+    label: updated
+    message: "{commit.date}"
+    color: "#236144"
+    font: dejavu-sans
+    font_size: 11
+  pulls:
+    label: pulls
+    message: "{docker.pulls}"
+    color: "#1d63ed"
+    link: "https://hub.docker.com/r/{var:org}/{var:repo}"
+  release-latest:
+    label: latest
+    message: "v{base}"
+    color: "#74ecbe"
+    link: "https://hub.docker.com/r/{var:org}/{var:repo}/tags?name=latest"
+  release-updated:
+    label: updated
+    message: "{docker.tag.v{base}.updated}"
+    color: "#236144"
+  release-size:
+    label: size
+    message: "{docker.tag.v{base}.size}"
+    color: "#555"
+    link: "https://hub.docker.com/r/{var:org}/{var:repo}/tags?name=v{base}"
+  dev-latest:
+    label: latest-dev
+    message: "dev-{{sha}}"
+    color: "#3b82f6"
+    link: "https://hub.docker.com/r/{var:org}/{var:repo}/tags?name=latest-dev"
+  dev-updated:
+    label: updated
+    message: "{docker.tag.latest-dev.updated}"
+    color: "#236144"
+  dev-size:
+    label: size
+    message: "{docker.tag.latest-dev.size}"
+    color: "#555"
+    link: "https://hub.docker.com/r/{var:org}/{var:repo}/tags?name=latest-dev"
 
   # ── inline shields ──
   donate:  { render: shield, message: donate,  color: "#FF5E5B", logo: ko-fi,          logo_color: white, link: "https://ko-fi.com/T6T41IT163" }
@@ -233,10 +287,23 @@ stencils:
   gitlab:  { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://gitlab.prplanit.com/{var:gitlab_group}/{var:repo}" }
   docker:  { render: shield, label: Docker, message: "{var:org}/{var:repo}", color: "#2496ED", logo: docker, logo_color: white, link: "https://hub.docker.com/r/{var:org}/{var:repo}" }
 
-  # ── named producers (repo resolves from repos: publish-origin) ──
+  # ── named producers · repo resolves from repos: publish-origin (github-mirror) ──
   last-commit:  { type: github-last-commit }
   issues-open:  { type: github-issues-open }
+  prs-open:     { type: github-prs-open }
   contributors: { type: github-contributors }
+
+  # ── build-contents (rendered from the build's manifest inventory) ──
+  contents-base:
+    type: contents
+    build: static-site
+    section: inventories.versions
+    render: badges
+  contents-apk:
+    type: contents
+    build: static-site
+    section: inventories.apk
+    render: badges
 
 scribe:
   files:
@@ -250,12 +317,23 @@ scribe:
       file: "README.md"
       between: ["<!-- sf:project:start -->", "<!-- sf:project:end -->"]
       inline: true
-      items: [github, gitlab, last-commit, issues-open, contributors]
+      items: [github, gitlab, last-commit, issues-open, prs-open, contributors]
 
+    # Multi-row (br = line break): Row 1 = docker + pulls, Row 2 = release + dev tags.
     readme.image:
       file: "README.md"
       between: ["<!-- sf:image:start -->", "<!-- sf:image:end -->"]
-      items: [docker, pulls]
+      items: [docker, pulls, br, release-latest, release-updated, release-size, dev-latest, dev-updated, dev-size]
+
+    readme.contents.base:
+      file: "README.md"
+      between: ["<!-- sf:contents-base:start -->", "<!-- sf:contents-base:end -->"]
+      items: [contents-base]
+
+    readme.contents.apk:
+      file: "README.md"
+      between: ["<!-- sf:contents-apk:start -->", "<!-- sf:contents-apk:end -->"]
+      items: [contents-apk]
 
   commit:
     type: docs

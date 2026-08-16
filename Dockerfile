@@ -3,7 +3,7 @@
 # static-site — hardened, non-root nginx (with brotli) base for prplanit static sites.
 #
 # Consumers are 2-liners:
-#     FROM cr.pcfae.com/prplanit/static-site:vX.Y.Z
+#     FROM docker.io/prplanit/static-site:vX.Y.Z
 #     COPY www-data/ /usr/share/nginx/html/
 #
 # nginx + the brotli module come from Alpine's own repo (main), pinned to an exact
