@@ -1,0 +1,25 @@
+# Only the Dockerfile + nginx.conf/default.conf/entrypoint.sh are needed to build.
+# Keep everything else out of the build context.
+
+# Git
+.git
+.gitignore
+.gitlab-ci.yml
+
+# StageFreight config + generated artifacts
+.stagefreight
+.stagefreight.yml
+
+# Docs / project meta (not part of the image)
+*.md
+LICENSE
+
+# AI / editor / OS
+.claude
+CLAUDE.md
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
