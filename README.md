@@ -18,7 +18,7 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 
 Base:
 <!-- sf:contents-base:start -->
-![alpine](https://img.shields.io/badge/alpine-3.23.5@sha256:1beb0dc0a51de7ff38e3b5274078a2e0b81113ba5c7535e1a03d5913a5edbda3-0078D4?style=flat)
+![alpine](https://img.shields.io/badge/alpine-${ALPINE__VERSION}-0078D4?style=flat)
 <!-- sf:contents-base:end -->
 
 Packages:
