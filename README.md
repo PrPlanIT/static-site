@@ -11,14 +11,14 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 <!-- sf:image:start -->
 [![Docker](https://img.shields.io/badge/Docker-prplanit%2Fstatic--site-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/prplanit/static-site) [![pulls](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/pulls.svg)](https://hub.docker.com/r/prplanit/static-site)
 
-[![latest](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=v0.0.1) [![latest-dev](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev)
+[![latest](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=v0.0.2) [![latest-dev](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-latest.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev) ![updated](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-updated.svg) [![size](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/dev-size.svg)](https://hub.docker.com/r/prplanit/static-site/tags?name=latest-dev)
 <!-- sf:image:end -->
 
 ## Image contents
 
 Base:
 <!-- sf:contents-base:start -->
-![alpine](https://img.shields.io/badge/alpine-${ALPINE__VERSION}-0078D4?style=flat)
+![alpine](https://img.shields.io/badge/alpine-3.23.5@sha256:1beb0dc0a51de7ff38e3b5274078a2e0b81113ba5c7535e1a03d5913a5edbda3-0078D4?style=flat)
 <!-- sf:contents-base:end -->
 
 Packages:
