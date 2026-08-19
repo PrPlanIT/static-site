@@ -18,12 +18,12 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 
 Base:
 <!-- sf:contents-base:start -->
-![alpine](https://img.shields.io/badge/alpine-3.23.5@sha256:1beb0dc0a51de7ff38e3b5274078a2e0b81113ba5c7535e1a03d5913a5edbda3-0078D4?style=flat)
+[![alpine 3.23.5](https://img.shields.io/badge/alpine-3.23.5-0078D4?style=flat)](https://hub.docker.com/_/alpine)
 <!-- sf:contents-base:end -->
 
 Packages:
 <!-- sf:contents-apk:start -->
-*No items*
+[![ca-certificates](https://img.shields.io/badge/ca--certificates-555?style=flat)](https://pkgs.alpinelinux.org/packages?name=ca-certificates) [![gettext](https://img.shields.io/badge/gettext-555?style=flat)](https://pkgs.alpinelinux.org/packages?name=gettext) [![nginx](https://img.shields.io/badge/nginx-555?style=flat)](https://pkgs.alpinelinux.org/packages?name=nginx) [![nginx-mod-http-brotli](https://img.shields.io/badge/nginx--mod--http--brotli-555?style=flat)](https://pkgs.alpinelinux.org/packages?name=nginx-mod-http-brotli) [![tzdata](https://img.shields.io/badge/tzdata-555?style=flat)](https://pkgs.alpinelinux.org/packages?name=tzdata)
 <!-- sf:contents-apk:end -->
 
 ## Usage
