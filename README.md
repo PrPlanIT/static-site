@@ -6,7 +6,7 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 [![GitHub](https://img.shields.io/badge/GitHub-mirror-181717?logo=github)](https://github.com/PrPlanIT/static-site) [![GitLab](https://img.shields.io/badge/GitLab-source-FC6D26?logo=gitlab)](https://gitlab.prplanit.com/PrPlanIT/static-site) [![license](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/license.svg)](https://github.com/PrPlanIT/static-site/blob/main/LICENSE) [![Open Issues](https://img.shields.io/github/issues/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/issues) [![Open PRs](https://img.shields.io/github/issues-pr/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/pulls) [![Contributors](https://img.shields.io/github/contributors/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/graphs/contributors) [![donate](https://img.shields.io/badge/donate-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/T6T41IT163) [![sponsor](https://img.shields.io/badge/sponsor-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/PrPlanIT)
 <!-- sf:project:end -->
 <!-- sf:badges:start -->
-[![release](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release.svg)](https://github.com/PrPlanIT/static-site/releases) [![build](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/PrPlanIT/static-site/-/pipelines) [![Last Commit](https://img.shields.io/github/last-commit/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/commits) [![StageFreight](https://img.shields.io/badge/StageFreight-0.12.0--dev+e2c558a-310937?logo=readthedocs&logoColor=white)](https://stagefreight.prplanit.com)
+[![release](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/release.svg)](https://github.com/PrPlanIT/static-site/releases) [![build](https://raw.githubusercontent.com/PrPlanIT/static-site/main/.stagefreight/scribe/build.svg)](https://gitlab.prplanit.com/PrPlanIT/static-site/-/pipelines) [![Last Commit](https://img.shields.io/github/last-commit/PrPlanIT/static-site)](https://github.com/PrPlanIT/static-site/commits) [![StageFreight](https://img.shields.io/badge/StageFreight-0.14.0--dev+a543656-310937?logo=readthedocs&logoColor=white)](https://stagefreight.prplanit.com)
 <!-- sf:badges:end -->
 <!-- sf:image:start -->
 [![GHCR](https://img.shields.io/badge/GHCR-prplanit%2Fstatic--site-181717?logo=github&logoColor=white)](https://github.com/PrPlanIT/static-site/pkgs/container/static-site) [![Docker](https://img.shields.io/badge/Docker-prplanit%2Fstatic--site-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/prplanit/static-site) [![pulls](https://img.shields.io/docker/pulls/prplanit/static-site?color=1d63ed&logo=docker&logoColor=white)](https://hub.docker.com/r/prplanit/static-site) [![Harbor](https://img.shields.io/badge/Harbor-prplanit%2Fstatic--site-60b932)](https://cr.pcfae.com/harbor/projects)
@@ -18,7 +18,7 @@ Hardened, non-root **nginx** (with brotli) base image for prplanit static sites.
 
 Base:
 <!-- sf:contents-base:start -->
-[![alpine 3.23.5](https://img.shields.io/badge/alpine-3.23.5-0078D4?style=flat)](https://hub.docker.com/_/alpine)
+[![alpine 3.23.7](https://img.shields.io/badge/alpine-3.23.7-0078D4?style=flat)](https://hub.docker.com/_/alpine)
 <!-- sf:contents-base:end -->
 
 Packages:
