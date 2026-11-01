@@ -16,7 +16,7 @@ FROM docker.io/library/alpine:3.23.7@sha256:ff7f0c727dd796aa36787bfcd9a64bf35a6c
 
 LABEL org.opencontainers.image.title="static-site" \
       org.opencontainers.image.description="Hardened non-root nginx (brotli) base image for prplanit static sites" \
-      org.opencontainers.image.source="https://gitlab.prplanit.com/PrPlanIT/static-site" \
+      org.opencontainers.image.source="https://git.optcp.com/PrPlanIT/static-site" \
       org.opencontainers.image.vendor="PrPlanIT" \
       org.opencontainers.image.licenses="MIT"
 
