@@ -45,7 +45,6 @@ metadata:
   description:
     - Base image for serving a static site from a container.
     - Minimal container image that serves a static site directory, used as the base for the .com site repos.
-  license: MIT
   org: PrPlanIT
   title: Static Site
   topics:
